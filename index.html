@@ -1,44 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+		<title>Frontend Mentor | Tip calculator app</title>
+	</head>
+	<body>
+		<main>
+			<header>
+				<img src="./images/logo.svg" alt="splitter" />
+			</header>
+			<section>
+				<form>
+					<p>Bill</p>
+					<input type="number" aria-label="bill" />
+					<p>Select Tip %</p>
+					<label><input type="radio" /><span>5%</span></label>
+					<label><input type="radio" /><span>10%</span></label>
+					<label><input type="radio" /><span>15%</span></label>
+					<label><input type="radio" /><span>25%</span></label>
+					<label><input type="radio" /><span>50%</span></label>
+					<label><input type="number" /><span>Custom</span></label>
+					<p>Number of People</p>
+					<input type="number" aria-label="number of people" />
+				</form>
+				<div>
+					<div>
+						<div>
+							<p>Tip Amount</p>
+							<p>/ person</p>
+						</div>
+						<div></div>
+					</div>
+					<div>
+						<div>
+							<p>Total</p>
+							<p>/ person</p>
+						</div>
+						<div></div>
+					</div>
+					<button>Reset</button>
+				</div>
+			</section>
+		</main>
+	</body>
 </html>
