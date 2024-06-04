@@ -1,2 +1,18 @@
 // @use './styles/root';
 @use './styles/' as *;
+
+body {
+	background-color: var(--clr-neutral-cyanSemiLight);
+	font-family: var(--ff-primary-text);
+	font-weight: var(--fw-bold);
+	font-style: normal;
+
+	header {
+		padding-top: 3.125rem;
+		padding-bottom: 2.5rem;
+
+		.logo {
+			margin: 0 auto;
+		}
+	}
+}

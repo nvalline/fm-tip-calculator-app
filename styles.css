@@ -102,4 +102,18 @@ textarea:not([rows]) {
   --fs-p-16: 1rem;
   /* Loop to declare font weight variables */
   --fw-bold: 700;
+}
+
+body {
+  background-color: var(--clr-neutral-cyanSemiLight);
+  font-family: var(--ff-primary-text);
+  font-weight: var(--fw-bold);
+  font-style: normal;
+}
+body header {
+  padding-top: 3.125rem;
+  padding-bottom: 2.5rem;
+}
+body header .logo {
+  margin: 0 auto;
 }/*# sourceMappingURL=styles.css.map */
