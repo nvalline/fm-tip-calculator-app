@@ -35,19 +35,23 @@
 					class="logo"
 				/>
 			</header>
-			<section>
+			<section class="calculator">
 				<form>
-					<p>Bill</p>
-					<input type="number" aria-label="bill" />
-					<p>Select Tip %</p>
+					<p class="formBlockLabel">Bill</p>
+					<label for="bill" class="inputLabel" id="billLabel">
+						<input type="number" id="bill" placeholder="0" />
+					</label>
+					<p class="formBlockLabel">Select Tip %</p>
 					<label><input type="radio" /><span>5%</span></label>
 					<label><input type="radio" /><span>10%</span></label>
 					<label><input type="radio" /><span>15%</span></label>
 					<label><input type="radio" /><span>25%</span></label>
 					<label><input type="radio" /><span>50%</span></label>
 					<label><input type="number" /><span>Custom</span></label>
-					<p>Number of People</p>
-					<input type="number" aria-label="number of people" />
+					<p class="formBlockLabel">Number of People</p>
+					<label for="count" class="inputLabel" id="countLabel">
+						<input type="number" id="count" placeholder="0" />
+					</label>
 				</form>
 				<div>
 					<div>
