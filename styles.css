@@ -140,7 +140,7 @@ body .calculator form .formBlockLabel:nth-child(2 of .formBlockLabel) {
 body .calculator form .inputLabel {
   position: relative;
 }
-body .calculator form .inputLabel input {
+body .calculator form .inputLabel input[type=number] {
   padding: 0.375rem 1.1875rem;
   margin-bottom: 2rem;
   width: 100%;
@@ -150,12 +150,18 @@ body .calculator form .inputLabel input {
   text-align: right;
   font-size: var(--fs-input-24);
   color: var(--clr-neutral-cyanDark);
+  outline: none;
+  caret-color: var(--clr-primary-cyan);
 }
-body .calculator form .inputLabel input::-moz-placeholder {
+body .calculator form .inputLabel input[type=number]::-moz-placeholder {
   color: var(--clr-neutral-cyanMd);
 }
-body .calculator form .inputLabel input::placeholder {
+body .calculator form .inputLabel input[type=number]::placeholder {
   color: var(--clr-neutral-cyanMd);
+}
+body .calculator form .inputLabel input[type=number]:focus {
+  outline: 2px solid var(--clr-primary-cyan);
+  outline-offset: -2px;
 }
 body .calculator form .inputLabel::before {
   content: "";
@@ -182,12 +188,12 @@ body .calculator form .tipSelections {
   grid-template-rows: 48px 48px 48px;
   gap: 1rem;
 }
-body .calculator form .tipSelections label {
+body .calculator form .tipSelections label:not(:last-child) {
   position: relative;
   background-color: var(--radio-default-bg-color);
   border-radius: 5px;
 }
-body .calculator form .tipSelections label input[type=radio] {
+body .calculator form .tipSelections label:not(:last-child) input[type=radio] {
   height: 100%;
   width: 100%;
   border-radius: 5px;
@@ -195,11 +201,11 @@ body .calculator form .tipSelections label input[type=radio] {
      -moz-appearance: none;
           appearance: none;
 }
-body .calculator form .tipSelections label input[type=radio]:not(:disabled):checked {
+body .calculator form .tipSelections label:not(:last-child) input[type=radio]:not(:disabled):checked {
   background-color: var(--radio-checked-color);
   background-clip: content-box;
 }
-body .calculator form .tipSelections label span {
+body .calculator form .tipSelections label:not(:last-child) span {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -207,11 +213,14 @@ body .calculator form .tipSelections label span {
   font-size: var(--fs-input-24);
   color: var(--clr-neutral-white);
 }
-body .calculator form .tipSelections label:has(:checked) span {
+body .calculator form .tipSelections label:not(:last-child):has(:checked) span {
   color: var(--clr-neutral-cyanDark);
 }
-body .calculator form .tipSelections input[type=number] {
-  width: 100%;
+body .calculator form .tipSelections input[type=number]::-moz-placeholder {
+  color: var(--clr-neutral-cyanSemiDark);
+}
+body .calculator form .tipSelections input[type=number]::placeholder {
+  color: var(--clr-neutral-cyanSemiDark);
 }
 body .calculator form .tipSelections .disabled input[type=radio] {
   background-color: var(--radio-default-bg-color);
