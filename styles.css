@@ -92,6 +92,7 @@ textarea:not([rows]) {
   --clr-neutral-seafoam: hsl(173, 61%, 77%);
   --clr-neutral-white: hsl(0, 0%, 100%);
   --clr-alert-red: hsl(13, 70%, 61%);
+  --clr-btn-disabled: hsl(183, 79%, 24%);
   --radio-checked-color: var(--clr-primary-cyan);
   --radio-default-bg-color: var(--clr-neutral-cyanDark);
   --radio-hover-color: var(--clr-neutral-seafoam);
@@ -123,6 +124,8 @@ body header .logo {
 }
 body .calculator {
   padding: 2rem;
+  margin: 0 auto;
+  max-width: 375px;
   background-color: var(--clr-neutral-white);
   border-radius: 25px 25px 0 0;
 }
@@ -152,6 +155,9 @@ body .calculator form .inputLabel input[type=number] {
   color: var(--clr-neutral-cyanDark);
   outline: none;
   caret-color: var(--clr-primary-cyan);
+}
+body .calculator form .inputLabel input[type=number]::-webkit-inner-spin-button, body .calculator form .inputLabel input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
 }
 body .calculator form .inputLabel input[type=number]::-moz-placeholder {
   color: var(--clr-neutral-cyanMd);
@@ -260,4 +266,14 @@ body .calculator .outputWrapper .details .costBreakdown p {
   font-size: var(--fs-output-32);
   color: var(--clr-primary-cyan);
   letter-spacing: -0.67px;
+}
+body .calculator .outputWrapper button {
+  height: 48px;
+  width: 100%;
+  background-color: var(--clr-btn-disabled);
+  border: none;
+  border-radius: 5px;
+  font-size: var(--fs-btn-20);
+  color: var(--clr-neutral-cyanDark);
+  text-transform: uppercase;
 }/*# sourceMappingURL=styles.css.map */
