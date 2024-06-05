@@ -216,6 +216,9 @@ body .calculator form .tipSelections label:not(:last-child) span {
 body .calculator form .tipSelections label:not(:last-child):has(:checked) span {
   color: var(--clr-neutral-cyanDark);
 }
+body .calculator form .tipSelections input[type=number] {
+  margin-bottom: 0;
+}
 body .calculator form .tipSelections input[type=number]::-moz-placeholder {
   color: var(--clr-neutral-cyanSemiDark);
 }
@@ -227,4 +230,34 @@ body .calculator form .tipSelections .disabled input[type=radio] {
 }
 body .calculator form .tipSelections .disabled span {
   color: var(--clr-neutral-white);
+}
+body .calculator .outputWrapper {
+  padding: 2.3125rem 1.5rem 1.5rem;
+  border-radius: 15px;
+  background-color: var(--clr-neutral-cyanDark);
+}
+body .calculator .outputWrapper .details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .calculator .outputWrapper .details:first-child {
+  margin-bottom: 1.5rem;
+}
+body .calculator .outputWrapper .details:nth-child(2) {
+  margin-bottom: 2rem;
+}
+body .calculator .outputWrapper .details .description .outputLabel {
+  font-size: var(--fs-p-16);
+  color: var(--clr-neutral-white);
+  text-transform: capitalize;
+}
+body .calculator .outputWrapper .details .description p {
+  font-size: var(--fs-p-13);
+  color: var(--clr-neutral-cyanMd);
+}
+body .calculator .outputWrapper .details .costBreakdown p {
+  font-size: var(--fs-output-32);
+  color: var(--clr-primary-cyan);
+  letter-spacing: -0.67px;
 }/*# sourceMappingURL=styles.css.map */
