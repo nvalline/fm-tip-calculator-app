@@ -8,6 +8,11 @@
 		}
 	}
 
+	// Radio Button Variables
+	--radio-checked-color: var(--clr-primary-cyan);
+	--radio-default-bg-color: var(--clr-neutral-cyanDark);
+	--radio-hover-color: var(--clr-neutral-seafoam);
+
 	/* Loop to declare font family variables */
 	@each $font-type, $type in $font-families {
 		@each $font, $value in $type {
