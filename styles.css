@@ -93,6 +93,7 @@ textarea:not([rows]) {
   --clr-neutral-white: hsl(0, 0%, 100%);
   --clr-alert-red: hsl(13, 70%, 61%);
   --clr-btn-disabled: hsl(183, 79%, 24%);
+  --clr-shadow-cyan: hsla(186, 38%, 50%, 0.2007);
   --radio-checked-color: var(--clr-primary-cyan);
   --radio-default-bg-color: var(--clr-neutral-cyanDark);
   --radio-hover-color: var(--clr-neutral-seafoam);
@@ -119,6 +120,12 @@ body header {
   padding-top: 3.125rem;
   padding-bottom: 2.5rem;
 }
+@media (min-width: 59.5em) {
+  body header {
+    padding-top: 10.1875rem;
+    padding-bottom: 5.5rem;
+  }
+}
 body header .logo {
   margin: 0 auto;
 }
@@ -129,8 +136,25 @@ body .calculator {
   background-color: var(--clr-neutral-white);
   border-radius: 25px 25px 0 0;
 }
+@media (min-width: 59.5em) {
+  body .calculator {
+    padding: 2rem 2rem 2rem 3rem;
+    max-width: 920px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    border-radius: 25px;
+    box-shadow: 0 32px 43px var(--clr-shadow-cyan);
+  }
+}
 body .calculator form {
   max-width: 311px;
+}
+@media (min-width: 59.5em) {
+  body .calculator form {
+    max-width: 379px;
+  }
 }
 body .calculator form .formBlockLabel {
   margin-bottom: 0.375rem;
@@ -155,6 +179,11 @@ body .calculator form .inputLabel input[type=number] {
   color: var(--clr-neutral-cyanDark);
   outline: none;
   caret-color: var(--clr-primary-cyan);
+}
+@media (min-width: 59.5em) {
+  body .calculator form .inputLabel input[type=number] {
+    margin-bottom: 2.5rem;
+  }
 }
 body .calculator form .inputLabel input[type=number]::-webkit-inner-spin-button, body .calculator form .inputLabel input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -181,6 +210,11 @@ body .calculator form #billLabel::before {
   width: 9.84px;
   background: url("./images/icon-dollar.svg") center/contain no-repeat;
 }
+@media (min-width: 59.5em) {
+  body .calculator form #countLabel input[type=number] {
+    margin-bottom: 0;
+  }
+}
 body .calculator form #countLabel::before {
   height: 16px;
   width: 13px;
@@ -193,6 +227,13 @@ body .calculator form .tipSelections {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 48px 48px 48px;
   gap: 1rem;
+}
+@media (min-width: 59.5em) {
+  body .calculator form .tipSelections {
+    margin-bottom: 2.5rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 48px 48px;
+  }
 }
 body .calculator form .tipSelections label:not(:last-child) {
   position: relative;
@@ -225,6 +266,11 @@ body .calculator form .tipSelections label:not(:last-child):has(:checked) span {
 body .calculator form .tipSelections input[type=number] {
   margin-bottom: 0;
 }
+@media (min-width: 59.5em) {
+  body .calculator form .tipSelections input[type=number] {
+    padding: 0.375rem 0.875rem;
+  }
+}
 body .calculator form .tipSelections input[type=number]::-moz-placeholder {
   color: var(--clr-neutral-cyanSemiDark);
 }
@@ -242,6 +288,13 @@ body .calculator .outputWrapper {
   border-radius: 15px;
   background-color: var(--clr-neutral-cyanDark);
 }
+@media (min-width: 59.5em) {
+  body .calculator .outputWrapper {
+    width: 100%;
+    max-width: 413px;
+    padding: 2.5rem;
+  }
+}
 body .calculator .outputWrapper .details {
   display: flex;
   align-items: center;
@@ -250,8 +303,18 @@ body .calculator .outputWrapper .details {
 body .calculator .outputWrapper .details:first-child {
   margin-bottom: 1.5rem;
 }
+@media (min-width: 59.5em) {
+  body .calculator .outputWrapper .details:first-child {
+    margin-bottom: 2rem;
+  }
+}
 body .calculator .outputWrapper .details:nth-child(2) {
   margin-bottom: 2rem;
+}
+@media (min-width: 59.5em) {
+  body .calculator .outputWrapper .details:nth-child(2) {
+    margin-bottom: 7.625rem;
+  }
 }
 body .calculator .outputWrapper .details .description .outputLabel {
   font-size: var(--fs-p-16);
@@ -266,6 +329,11 @@ body .calculator .outputWrapper .details .costBreakdown p {
   font-size: var(--fs-output-32);
   color: var(--clr-primary-cyan);
   letter-spacing: -0.67px;
+}
+@media (min-width: 59.5em) {
+  body .calculator .outputWrapper .details .costBreakdown p {
+    font-size: var(--fs-output-48);
+  }
 }
 body .calculator .outputWrapper button {
   height: 48px;

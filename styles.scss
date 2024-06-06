@@ -10,6 +10,11 @@ body {
 		padding-top: 3.125rem;
 		padding-bottom: 2.5rem;
 
+		@media (min-width: 59.5em) {
+			padding-top: 10.1875rem;
+			padding-bottom: 5.5rem;
+		}
+
 		.logo {
 			margin: 0 auto;
 		}
@@ -22,8 +27,23 @@ body {
 		background-color: var(--clr-neutral-white);
 		border-radius: 25px 25px 0 0;
 
+		@media (min-width: 59.5em) {
+			padding: 2rem 2rem 2rem 3rem;
+			max-width: 920px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 3rem;
+			border-radius: 25px;
+			box-shadow: 0 32px 43px var(--clr-shadow-cyan);
+		}
+
 		form {
 			max-width: 311px;
+
+			@media (min-width: 59.5em) {
+				max-width: 379px;
+			}
 
 			.formBlockLabel {
 				margin-bottom: 0.375rem;
@@ -50,6 +70,10 @@ body {
 					color: var(--clr-neutral-cyanDark);
 					outline: none;
 					caret-color: var(--clr-primary-cyan);
+
+					@media (min-width: 59.5em) {
+						margin-bottom: 2.5rem;
+					}
 
 					&::-webkit-inner-spin-button,
 					&::-webkit-outer-spin-button {
@@ -81,6 +105,13 @@ body {
 				background: url('./images/icon-dollar.svg') center / contain no-repeat;
 			}
 
+			#countLabel {
+				@media (min-width: 59.5em) {
+					input[type='number'] {
+						margin-bottom: 0;
+					}
+				}
+			}
 			#countLabel::before {
 				height: 16px;
 				width: 13px;
@@ -94,6 +125,12 @@ body {
 				grid-template-columns: 1fr 1fr;
 				grid-template-rows: 48px 48px 48px;
 				gap: 1rem;
+
+				@media (min-width: 59.5em) {
+					margin-bottom: 2.5rem;
+					grid-template-columns: 1fr 1fr 1fr;
+					grid-template-rows: 48px 48px;
+				}
 
 				label:not(:last-child) {
 					position: relative;
@@ -131,6 +168,10 @@ body {
 				input[type='number'] {
 					margin-bottom: 0;
 
+					@media (min-width: 59.5em) {
+						padding: 0.375rem 0.875rem;
+					}
+
 					&::placeholder {
 						color: var(--clr-neutral-cyanSemiDark);
 					}
@@ -153,6 +194,12 @@ body {
 			border-radius: 15px;
 			background-color: var(--clr-neutral-cyanDark);
 
+			@media (min-width: 59.5em) {
+				width: 100%;
+				max-width: 413px;
+				padding: 2.5rem;
+			}
+
 			.details {
 				display: flex;
 				align-items: center;
@@ -160,10 +207,18 @@ body {
 
 				&:first-child {
 					margin-bottom: 1.5rem;
+
+					@media (min-width: 59.5em) {
+						margin-bottom: 2rem;
+					}
 				}
 
 				&:nth-child(2) {
 					margin-bottom: 2rem;
+
+					@media (min-width: 59.5em) {
+						margin-bottom: 7.625rem;
+					}
 				}
 
 				.description {
@@ -184,6 +239,10 @@ body {
 						font-size: var(--fs-output-32);
 						color: var(--clr-primary-cyan);
 						letter-spacing: -0.67px;
+
+						@media (min-width: 59.5em) {
+							font-size: var(--fs-output-48);
+						}
 					}
 				}
 			}
