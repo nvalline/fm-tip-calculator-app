@@ -23,6 +23,8 @@
 			href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
 			rel="stylesheet"
 		/>
+
+		<script defer src="./scripts/scripts.js"></script>
 	</head>
 	<body>
 		<main>
@@ -44,22 +46,32 @@
 					<p class="formBlockLabel">Select Tip %</p>
 					<div class="tipSelections">
 						<label
-							><input type="radio" name="tipAmount" /><span>5%</span></label
+							><input type="radio" name="tipAmount" value="0.05" /><span
+								>5%</span
+							></label
 						>
 						<label
-							><input type="radio" name="tipAmount" /><span>10%</span></label
+							><input type="radio" name="tipAmount" value="0.1" /><span
+								>10%</span
+							></label
 						>
 						<label
-							><input type="radio" name="tipAmount" /><span>15%</span></label
+							><input type="radio" name="tipAmount" value="0.15" /><span
+								>15%</span
+							></label
 						>
 						<label
-							><input type="radio" name="tipAmount" /><span>25%</span></label
+							><input type="radio" name="tipAmount" value="0.25" /><span
+								>25%</span
+							></label
 						>
 						<label
-							><input type="radio" name="tipAmount" /><span>50%</span></label
+							><input type="radio" name="tipAmount" value="0.5" /><span
+								>50%</span
+							></label
 						>
 						<label for="custom" class="inputLabel">
-							<input type="number" placeholder="Custom" />
+							<input type="number" id="customTip" placeholder="Custom" />
 						</label>
 					</div>
 					<p class="formBlockLabel">Number of People</p>
@@ -86,7 +98,7 @@
 							<p>$<span>0.00</span></p>
 						</div>
 					</div>
-					<button>Reset</button>
+					<button type="button" disabled>Reset</button>
 				</div>
 			</section>
 		</main>
