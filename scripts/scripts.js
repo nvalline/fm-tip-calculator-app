@@ -4,15 +4,10 @@ const radioButtons = document.getElementsByName('tipAmount');
 const resetButton = document.getElementById('resetButton');
 const formInputs = document.querySelectorAll('input');
 
-// let billTotalAmount = 0;
-// let tipPercentageAmount = 0;
-// let customTipPercentageAmount = 0;
-// let numberOfPeople = 0;
-
-const amounts = {
-	totalBill: 0,
-	tipPercentage: 0,
-	numberOfPeople: 0
+let amounts = {
+	totalBill: '',
+	tipPercentage: '',
+	numberOfPeople: ''
 };
 
 // Reset radio button check status when custom tip selected
@@ -27,35 +22,30 @@ customTipButton.addEventListener('focus', () => removeCheckedStatus());
 // Get input values
 Array.prototype.forEach.call(formInputs, (input) => {
 	input.addEventListener('input', (e) => {
-		// console.log('AMOUNT', input.value);
-		// console.log('TARGET', input.name);
-
 		switch (input.name) {
 			case 'bill':
-				amounts.totalBill = parseInt(input.value);
-				// billTotalAmount = input.value;
+				amounts.totalBill = input.value;
 				break;
 			case 'tipAmount':
 				amounts.tipPercentage = input.value;
-				// tipPercentageAmount = input.value;
 				break;
 			case 'customTip':
-				amounts.tipPercentage = parseInt(input.value);
-				// customTipPercentageAmount = input.value;
+				amounts.tipPercentage = input.value;
 				break;
 			case 'count':
-				amounts.numberOfPeople = parseInt(input.value);
-				// numberOfPeople = input.value;
+				amounts.numberOfPeople = input.value;
 				break;
 			default:
-				'0';
+				0;
 		}
 
 		console.log('AMOUNTS', amounts);
-
+		// setInputAmounts(amounts);
 		setResetBtnDisabled(amounts);
 	});
 });
+
+// Display input values
 
 // Set Reset button disabled
 const setResetBtnDisabled = (amounts) => {
@@ -67,3 +57,15 @@ const setResetBtnDisabled = (amounts) => {
 		resetButton.disabled = false;
 	}
 };
+
+// Handle Reset Button click
+resetButton.addEventListener('click', () => {
+	amounts = {
+		totalBill: '',
+		tipPercentage: '',
+		numberOfPeople: ''
+	};
+
+	removeCheckedStatus();
+	setResetBtnDisabled(amounts);
+});
