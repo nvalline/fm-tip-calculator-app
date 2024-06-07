@@ -260,6 +260,14 @@ body .calculator form .tipSelections label:not(:last-child) span {
   font-size: var(--fs-input-24);
   color: var(--clr-neutral-white);
 }
+body .calculator form .tipSelections label:not(:last-child):hover,
+body .calculator form .tipSelections label:not(:last-child) input:hover {
+  background-color: var(--clr-neutral-seafoam);
+}
+body .calculator form .tipSelections label:not(:last-child):hover > span,
+body .calculator form .tipSelections label:not(:last-child) input:hover > span {
+  color: var(--clr-neutral-cyanDark);
+}
 body .calculator form .tipSelections label:not(:last-child):has(:checked) span {
   color: var(--clr-neutral-cyanDark);
 }
@@ -344,4 +352,9 @@ body .calculator .outputWrapper button {
   font-size: var(--fs-btn-20);
   color: var(--clr-neutral-cyanDark);
   text-transform: uppercase;
+}
+body .calculator label:hover,
+body .calculator input:hover,
+body .calculator button:hover {
+  cursor: pointer;
 }/*# sourceMappingURL=styles.css.map */

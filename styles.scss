@@ -158,6 +158,15 @@ body {
 						color: var(--clr-neutral-white);
 					}
 
+					&:hover,
+					input:hover {
+						background-color: var(--clr-neutral-seafoam);
+
+						> span {
+							color: var(--clr-neutral-cyanDark);
+						}
+					}
+
 					&:has(:checked) {
 						span {
 							color: var(--clr-neutral-cyanDark);
@@ -257,6 +266,12 @@ body {
 				color: var(--clr-neutral-cyanDark);
 				text-transform: uppercase;
 			}
+		}
+
+		label:hover,
+		input:hover,
+		button:hover {
+			cursor: pointer;
 		}
 	}
 }
