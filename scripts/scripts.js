@@ -1,4 +1,5 @@
 const billTotalInput = document.getElementById('bill');
+const countInput = document.getElementById('count');
 const customTipButton = document.getElementById('customTip');
 const radioButtons = document.getElementsByName('tipAmount');
 const resetButton = document.getElementById('resetButton');
@@ -30,7 +31,7 @@ Array.prototype.forEach.call(formInputs, (input) => {
 				amounts.tipPercentage = input.value;
 				break;
 			case 'customTip':
-				amounts.tipPercentage = input.value;
+				amounts.tipPercentage = (input.value / 100).toString();
 				break;
 			case 'count':
 				amounts.numberOfPeople = input.value;
@@ -40,12 +41,10 @@ Array.prototype.forEach.call(formInputs, (input) => {
 		}
 
 		console.log('AMOUNTS', amounts);
-		// setInputAmounts(amounts);
+
 		setResetBtnDisabled(amounts);
 	});
 });
-
-// Display input values
 
 // Set Reset button disabled
 const setResetBtnDisabled = (amounts) => {
@@ -59,13 +58,4 @@ const setResetBtnDisabled = (amounts) => {
 };
 
 // Handle Reset Button click
-resetButton.addEventListener('click', () => {
-	amounts = {
-		totalBill: '',
-		tipPercentage: '',
-		numberOfPeople: ''
-	};
-
-	removeCheckedStatus();
-	setResetBtnDisabled(amounts);
-});
+resetButton.addEventListener('click', () => location.reload());
