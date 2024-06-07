@@ -259,12 +259,17 @@ body {
 			button {
 				height: 48px;
 				width: 100%;
-				background-color: var(--clr-btn-disabled);
+				background-color: var(--clr-primary-cyan);
 				border: none;
 				border-radius: 5px;
 				font-size: var(--fs-btn-20);
 				color: var(--clr-neutral-cyanDark);
 				text-transform: uppercase;
+
+				&:disabled {
+					background-color: var(--clr-btn-disabled);
+					cursor: default;
+				}
 			}
 		}
 

@@ -41,7 +41,7 @@
 				<form>
 					<p class="formBlockLabel">Bill</p>
 					<label for="bill" class="inputLabel" id="billLabel">
-						<input type="number" id="bill" placeholder="0" />
+						<input type="number" id="bill" name="bill" placeholder="0" />
 					</label>
 					<p class="formBlockLabel">Select Tip %</p>
 					<div class="tipSelections">
@@ -71,12 +71,17 @@
 							></label
 						>
 						<label for="custom" class="inputLabel">
-							<input type="number" id="customTip" placeholder="Custom" />
+							<input
+								type="number"
+								id="customTip"
+								name="customTip"
+								placeholder="Custom"
+							/>
 						</label>
 					</div>
 					<p class="formBlockLabel">Number of People</p>
 					<label for="count" class="inputLabel" id="countLabel">
-						<input type="number" id="count" placeholder="0" />
+						<input type="number" id="count" name="count" placeholder="0" />
 					</label>
 				</form>
 				<div class="outputWrapper">
@@ -98,7 +103,7 @@
 							<p>$<span>0.00</span></p>
 						</div>
 					</div>
-					<button type="button" disabled>Reset</button>
+					<button type="button" id="resetButton" disabled="true">Reset</button>
 				</div>
 			</section>
 		</main>

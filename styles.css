@@ -346,12 +346,16 @@ body .calculator .outputWrapper .details .costBreakdown p {
 body .calculator .outputWrapper button {
   height: 48px;
   width: 100%;
-  background-color: var(--clr-btn-disabled);
+  background-color: var(--clr-primary-cyan);
   border: none;
   border-radius: 5px;
   font-size: var(--fs-btn-20);
   color: var(--clr-neutral-cyanDark);
   text-transform: uppercase;
+}
+body .calculator .outputWrapper button:disabled {
+  background-color: var(--clr-btn-disabled);
+  cursor: default;
 }
 body .calculator label:hover,
 body .calculator input:hover,
