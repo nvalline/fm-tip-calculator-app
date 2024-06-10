@@ -33,8 +33,10 @@ const calculateTipAmounts = (amounts) => {
 	let tipPerPerson = ((bill * tipPercentage) / count).toFixed(2);
 	let totalPerPerson = (bill / count + parseFloat(tipPerPerson)).toFixed(2);
 
-	tipPerPersonEl.innerHTML = tipPerPerson;
-	totalPerPersonEl.innerHTML = totalPerPerson;
+	if (tipPerPerson > 0 && totalPerPerson > 0) {
+		tipPerPersonEl.innerHTML = tipPerPerson;
+		totalPerPersonEl.innerHTML = totalPerPerson;
+	}
 };
 
 // Display Errors
