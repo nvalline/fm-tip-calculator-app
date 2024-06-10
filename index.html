@@ -39,9 +39,18 @@
 			</header>
 			<section class="calculator">
 				<form>
-					<p class="formBlockLabel">Bill</p>
+					<div class="inputDesc">
+						<p class="formBlockLabel">Bill</p>
+						<p id="billError" class="errorText hidden">Can't be negative</p>
+					</div>
 					<label for="bill" class="inputLabel" id="billLabel">
-						<input type="number" id="bill" name="bill" placeholder="0" />
+						<input
+							type="number"
+							id="bill"
+							name="bill"
+							step="0.01"
+							placeholder="0"
+						/>
 					</label>
 					<p class="formBlockLabel">Select Tip %</p>
 					<div class="tipSelections">
@@ -79,7 +88,10 @@
 							/>
 						</label>
 					</div>
-					<p class="formBlockLabel">Number of People</p>
+					<div class="inputDesc">
+						<p class="formBlockLabel">Number of People</p>
+						<p id="countError" class="errorText hidden">Can't be zero</p>
+					</div>
 					<label for="count" class="inputLabel" id="countLabel">
 						<input type="number" id="count" name="count" placeholder="0" />
 					</label>
@@ -91,7 +103,7 @@
 							<p>/ person</p>
 						</div>
 						<div class="costBreakdown">
-							<p>$<span>0.00</span></p>
+							<p>$<span id="tipPerPerson">0.00</span></p>
 						</div>
 					</div>
 					<div class="details">
@@ -100,7 +112,7 @@
 							<p>/ person</p>
 						</div>
 						<div class="costBreakdown">
-							<p>$<span>0.00</span></p>
+							<p>$<span id="totalPerPerson">0.00</span></p>
 						</div>
 					</div>
 					<button type="button" id="resetButton" disabled="true">Reset</button>

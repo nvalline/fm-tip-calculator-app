@@ -196,6 +196,26 @@ body {
 					}
 				}
 			}
+
+			.inputDesc {
+				margin-bottom: 0.375rem;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+
+				p {
+					margin-bottom: 0;
+					font-size: var(--fs-p-16);
+				}
+
+				.errorText {
+					color: var(--clr-alert-red);
+				}
+			}
+
+			// #count:focus {
+			// 	outline: 2px solid var(--clr-alert-red);
+			// }
 		}
 
 		.outputWrapper {
@@ -279,4 +299,8 @@ body {
 			cursor: pointer;
 		}
 	}
+}
+
+.hidden {
+	display: none;
 }
