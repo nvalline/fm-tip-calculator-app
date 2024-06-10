@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Here](https://www.frontendmentor.io/solutions/vanilla-js-and-sass-TXf7mXxUdY)
 - Live Site URL: [Here](https://nv-tip-calculator-app.netlify.app/)
 
 ## My process
@@ -47,6 +47,8 @@ Users should be able to:
 ### What I learned
 
 In this challenge I learned how to customize radio buttons to fit the design criteria. This was something new to me and I am proud of how it turned out.
+
+Here is a snippet of that code:
 
 ```html
 <label>
