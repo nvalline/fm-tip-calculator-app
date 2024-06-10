@@ -212,10 +212,6 @@ body {
 					color: var(--clr-alert-red);
 				}
 			}
-
-			// #count:focus {
-			// 	outline: 2px solid var(--clr-alert-red);
-			// }
 		}
 
 		.outputWrapper {
@@ -285,10 +281,15 @@ body {
 				font-size: var(--fs-btn-20);
 				color: var(--clr-neutral-cyanDark);
 				text-transform: uppercase;
+				transition: background-color 300ms ease-in-out;
 
 				&:disabled {
 					background-color: var(--clr-btn-disabled);
 					cursor: default;
+				}
+
+				&:hover:not([disabled]) {
+					background-color: var(--clr-neutral-seafoam);
 				}
 			}
 		}
